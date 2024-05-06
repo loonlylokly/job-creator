@@ -5,14 +5,20 @@ const SdkContext = createContext({ sdk: null });
 
 const SdkContextProvider = ({ id, children }) => {
   const [sdk, setSdk] = useState(null);
+  console.log("provider", id, sdk);
 
   useEffect(() => {
     const initialize = async () => {
-      const sdk = new SurfaceSDK();
+      console.log("provider", id, sdk);
+      try {
+        const sdk = new SurfaceSDK();
 
-      await sdk.initialize();
+        await sdk.initialize();
 
-      setSdk(sdk);
+        setSdk(sdk);
+      } catch (error) {
+        console.log("Surface error");
+      }
     };
 
     initialize().catch(console.error);
