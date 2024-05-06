@@ -1,0 +1,20 @@
+:root {
+  --clr-black: #31323b;
+  --clr-gray: #3b3b3b;
+  --clr-gray-light: #858584;
+  --clr-white: #ffffff;
+  --clr-primary: #a259ff;
+
+  --clr-back: var(--clr-white);
+  --clr-back-second: var(--clr-gray);
+  --clr-caption: var(--clr-gray-light);
+  --clr-label: var(--clr-gray-light);
+  --clr-text: var(--clr-black);
+
+  --clr-cta: var(--clr-primary);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+  }
+} */
