@@ -1,14 +1,14 @@
 "use client";
 import { Suspense } from "react";
 import { JobCreator } from "@/widgets/jobCreator/JobCreator";
-import { Wrapper } from "../features/wrapper/Wrapper";
+import { PipedriveModal } from "../features/pipedriveModal/PipedriveModal";
 
 export default function Page() {
   return (
     <Suspense>
-      <Wrapper>
+      <PipedriveModal>
         <JobCreator />
-      </Wrapper>
+      </PipedriveModal>
     </Suspense>
   );
 }
