@@ -21,8 +21,4 @@ const SdkContextProvider = ({ id, children }) => {
   return <SdkContext.Provider value={sdk}>{children}</SdkContext.Provider>;
 };
 
-SdkContextProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
 export { SdkContext, SdkContextProvider };
