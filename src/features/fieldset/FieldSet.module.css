@@ -1,0 +1,13 @@
+.fieldset {
+  width: 100%;
+  /* width: fit-content; */
+  padding: 2rem;
+  background-color: var(--clr-back);
+  filter: drop-shadow(0 2px 1px var(--clr-shadow));
+  border-radius: 0.5rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}

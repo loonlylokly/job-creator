@@ -1,0 +1,58 @@
+.button {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.2rem;
+  color: var(--clr-back);
+  font-family: var(--font-work-sans);
+  font-size: 1.6rem;
+  line-height: 140%;
+  font-weight: 600;
+  transition: 300ms;
+  user-select: none;
+  cursor: pointer;
+
+  &:active {
+    transition: 300ms;
+  }
+
+  & svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.primary,
+.secondary,
+.tertiary {
+  background-color: var(--clr-cta);
+  border: 0.2rem solid var(--clr-cta);
+  border-radius: 40rem;
+
+  &:active {
+    background-color: transparent;
+  }
+}
+
+.primary {
+  height: 7.2rem;
+  padding: 2.05rem 5rem;
+}
+
+.secondary.secondary {
+  height: 6rem;
+  padding: 1.9rem 5rem;
+  color: var(--clr-text);
+  background-color: transparent;
+}
+
+.tertiary {
+  height: 4.6rem;
+  padding: 1.2rem 5rem;
+}
+
+.text {
+  background-color: transparent;
+  border: none;
+}

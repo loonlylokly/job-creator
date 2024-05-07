@@ -1,15 +1,16 @@
 :root {
   --clr-black: #31323b;
-  --clr-gray: #3b3b3b;
-  --clr-gray-light: #858584;
+  --clr-gray: #818181;
+  --clr-gray-light: #f0f0f0;
   --clr-white: #ffffff;
-  --clr-primary: #a259ff;
+  --clr-primary: #1fa31f;
 
   --clr-back: var(--clr-white);
-  --clr-back-second: var(--clr-gray);
-  --clr-caption: var(--clr-gray-light);
-  --clr-label: var(--clr-gray-light);
+  --clr-back-second: var(--clr-gray-light);
+  --clr-shadow: var(--clr-gray);
   --clr-text: var(--clr-black);
+  --clr-border: var(--clr-gray);
+  --clr-placeholder: var(--clr-gray);
 
   --clr-cta: var(--clr-primary);
 }

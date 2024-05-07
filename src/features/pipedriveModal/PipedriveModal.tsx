@@ -6,6 +6,8 @@ import { Command, Event } from "@pipedrive/custom-app-surfaces-sdk";
 import useSdk from "@/shared/lib/hooks/useSdk";
 import { checkHeight } from "@/shared/lib/helpers/common";
 
+import style from "./PipedriveModal.module.css";
+
 export const PipedriveModal = ({ children }: { children: React.ReactNode }) => {
   const searchParams = useSearchParams();
   const [height, setHeight] = useState(0);
@@ -20,6 +22,7 @@ export const PipedriveModal = ({ children }: { children: React.ReactNode }) => {
     }
 
     console.log("resize2");
+    console.log(height, width);
     sdk.execute(Command.RESIZE, { height, width });
   }, [height, sdk, width]);
 
@@ -55,7 +58,9 @@ export const PipedriveModal = ({ children }: { children: React.ReactNode }) => {
   }, [elementRef.current?.clientHeight, elementRef.current?.clientWidth]);
   return (
     <SdkContextProvider id={searchParams.get("id")}>
-      <div ref={elementRef}>{children}</div>
+      <div className={style.modal} ref={elementRef}>
+        {children}
+      </div>
     </SdkContextProvider>
   );
 };

@@ -1,5 +1,5 @@
-@import './colors.css';
-@import './normalize.css';
+@import "./colors.css";
+@import "./normalize.css";
 
 * {
   box-sizing: border-box;
@@ -15,7 +15,7 @@ body {
   font-family: var(--font-work-sans);
   font-size: 1.2rem;
   color: var(--clr-text);
-  background-color: var(--clr-back);
+  background-color: var(--clr-back-second);
 }
 
 a {

@@ -1,5 +1,6 @@
 import React, { useState, createContext, useEffect } from "react";
-import SurfaceSDK from "@pipedrive/custom-app-surfaces-sdk";
+// import SurfaceSDK from "@pipedrive/custom-app-surfaces-sdk";
+import AppExtensionsSDK from "@pipedrive/app-extensions-sdk";
 
 const SdkContext = createContext({ sdk: null });
 
@@ -11,7 +12,7 @@ const SdkContextProvider = ({ id, children }) => {
     const initialize = async () => {
       console.log("provider", id, sdk);
       try {
-        const sdk = new SurfaceSDK();
+        const sdk = new AppExtensionsSDK();
 
         await sdk.initialize();
 
@@ -22,7 +23,7 @@ const SdkContextProvider = ({ id, children }) => {
     };
 
     initialize().catch(console.error);
-  }, [id]);
+  }, [id, sdk]);
 
   return <SdkContext.Provider value={sdk}>{children}</SdkContext.Provider>;
 };

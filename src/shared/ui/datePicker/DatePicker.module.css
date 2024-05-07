@@ -1,0 +1,19 @@
+.trigger {
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--clr-placeholder);
+  background-color: var(--clr-back);
+  border: 0.1rem solid var(--clr-shadow);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.content {
+  padding: 0;
+  width: auto;
+}
