@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { SdkContextProvider } from "@/shared/lib/providers/pipesdk";
 import { Command, Event } from "@pipedrive/custom-app-surfaces-sdk";
 import useSdk from "@/shared/lib/hooks/useSdk";
-import { checkHeight } from "@/shared/lib/helpers/common";
+import { checkHeight, checkWidth } from "@/shared/lib/helpers/common";
 
 import style from "./PipedriveModal.module.css";
 
@@ -33,7 +33,7 @@ export const PipedriveModal = ({ children }: { children: React.ReactNode }) => {
 
     const visibilityChangeUnsubscribe = sdk.listen(Event.VISIBILITY, ({}) => {
       setHeight(checkHeight(elementRef.current?.clientHeight));
-      setWidth(checkHeight(elementRef.current?.clientWidth));
+      setWidth(checkWidth(elementRef.current?.clientWidth));
     });
 
     return () => {
@@ -44,7 +44,7 @@ export const PipedriveModal = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     function handleResize() {
       setHeight(checkHeight(elementRef.current?.clientHeight));
-      setWidth(checkHeight(elementRef.current?.clientWidth));
+      setWidth(checkWidth(elementRef.current?.clientWidth));
     }
 
     window.addEventListener("resize", handleResize);
@@ -54,7 +54,7 @@ export const PipedriveModal = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     setHeight(checkHeight(elementRef?.current?.clientHeight));
-    setWidth(checkHeight(elementRef?.current?.clientWidth));
+    setWidth(checkWidth(elementRef?.current?.clientWidth));
   }, [elementRef.current?.clientHeight, elementRef.current?.clientWidth]);
   return (
     <SdkContextProvider id={searchParams.get("id")}>
