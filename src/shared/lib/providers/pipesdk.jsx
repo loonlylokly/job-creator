@@ -23,7 +23,7 @@ const SdkContextProvider = ({ id, children }) => {
     };
 
     initialize().catch(console.error);
-  }, [id, sdk]);
+  }, [id]);
 
   return <SdkContext.Provider value={sdk}>{children}</SdkContext.Provider>;
 };
