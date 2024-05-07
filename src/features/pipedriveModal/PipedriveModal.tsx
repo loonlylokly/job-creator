@@ -39,8 +39,8 @@ export const PipedriveModal = ({ children }: { children: React.ReactNode }) => {
     }
 
     sdk.execute(Command.RESIZE, {
-      height: 750,
-      width: 1000,
+      height: 500,
+      width: 800,
       // height: checkHeight(height),
       // width: checkWidth(width),
     });

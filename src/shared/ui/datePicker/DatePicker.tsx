@@ -33,7 +33,9 @@ export const DatePicker = ({
     <FormField name={name}>
       {label && <FormLabel>Date of birth</FormLabel>}
       <Popover.Root>
-        <Popover.Trigger className={style.trigger}>
+        <Popover.Trigger
+          className={`${style.trigger} ${date && style.selected}`}
+        >
           {date ? format(date, "PPP") : placeholder}
           <CalendarIcon />
         </Popover.Trigger>
@@ -42,9 +44,11 @@ export const DatePicker = ({
             mode="single"
             selected={date}
             onSelect={setDate}
-            disabled={(date) =>
-              date > new Date() || date < new Date("1900-01-01")
-            }
+            disabled={(date) => {
+              let yestarday = new Date();
+              yestarday.setDate(yestarday.getDate() - 1);
+              return date < yestarday || date > new Date("2100-01-01");
+            }}
             initialFocus
           />
         </Popover.Content>

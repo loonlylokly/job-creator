@@ -36,19 +36,19 @@
 }
 
 .primary {
-  height: 7.2rem;
-  padding: 2.05rem 5rem;
+  height: 4rem;
+  padding: 1rem 3rem;
 }
 
 .secondary.secondary {
-  height: 6rem;
-  padding: 1.9rem 5rem;
+  height: 4rem;
+  padding: 1rem 3rem;
   color: var(--clr-text);
   background-color: transparent;
 }
 
 .tertiary {
-  height: 4.6rem;
+  height: 2.8rem;
   padding: 1.2rem 5rem;
 }
 

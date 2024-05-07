@@ -1,6 +1,6 @@
 .trigger {
   width: 100%;
-  padding: 0.8rem;
+  padding: 1.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,7 +13,12 @@
   text-align: left;
 }
 
+.selected {
+  color: var(--clr-text);
+}
+
 .content {
   padding: 0;
   width: auto;
+  z-index: 100;
 }

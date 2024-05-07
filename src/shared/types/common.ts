@@ -19,7 +19,7 @@ export type TTextAreaProps = {
   label?: string;
   message?: string;
 } & React.DetailedHTMLProps<
-  React.InputHTMLAttributes<HTMLTextAreaElement>,
+  React.TextareaHTMLAttributes<HTMLTextAreaElement>,
   HTMLTextAreaElement
 >;
 

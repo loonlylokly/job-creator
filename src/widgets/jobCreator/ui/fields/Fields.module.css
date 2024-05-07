@@ -14,7 +14,14 @@
   width: 100%;
 }
 
-.field > select {
+.field > div {
   width: 100%;
-  height: fit-content;
+  min-height: fit-content;
+  font-size: 1.2rem;
+  border: 0.1rem solid var(--clr-shadow);
+  border-radius: 0.5rem;
+
+  &::placeholder {
+    color: var(--clr-placeholder);
+  }
 }
