@@ -2,7 +2,7 @@ import React, { useState, createContext, useEffect } from "react";
 // import SurfaceSDK from "@pipedrive/custom-app-surfaces-sdk";
 import AppExtensionsSDK from "@pipedrive/app-extensions-sdk";
 
-const SdkContext = createContext({ sdk: null });
+const SdkContext = createContext({ sdk });
 
 const SdkContextProvider = ({ id, children }) => {
   const [sdk, setSdk] = useState(null);
