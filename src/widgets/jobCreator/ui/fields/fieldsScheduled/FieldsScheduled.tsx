@@ -22,29 +22,41 @@ export const FieldsScheduled = ({ reg, control, errors }: TProps) => {
   return (
     <FieldSet title="Scheduled">
       <div className={style.wrapper}>
-        <DatePicker placeholder="Start date" />
+        {/* <Controller
+          name="Select technician"
+          control={control}
+          render={({ field }) => (
+            <DatePicker {...field} placeholder="Start date" />
+          )}
+        /> */}
+        <input
+          className={style.datepicker}
+          type="date"
+          placeholder="Start date"
+          {...reg("Start date")}
+        />
         <div className={style.two_fields}>
           <InputText
             type="text"
             placeholder="Start time"
-            message={errors.startTime?.message}
-            {...reg("startTime")}
+            message={errors["Start time"]?.message}
+            {...reg("Start time")}
           />
           <InputText
             type="text"
             placeholder="End time"
-            message={errors.endTime?.message}
-            {...reg("endTime")}
+            message={errors["End time"]?.message}
+            {...reg("End time")}
           />
         </div>
         <Controller
-          name="testSelect"
+          name="Select technician"
           control={control}
           render={({ field }) => (
             <Select
               className={style.field}
-              instanceId="Test select"
-              placeholder="Test select"
+              instanceId="Select technician"
+              placeholder="Select technician"
               {...field}
               options={[
                 { value: "test1", label: "test1" },

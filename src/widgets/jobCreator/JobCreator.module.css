@@ -1,6 +1,6 @@
 .form {
   width: 100%;
-  padding: 3rem;
+  padding: 1rem;
 }
 
 .fields {
@@ -17,4 +17,14 @@
   align-items: center;
   justify-content: center;
   column-gap: 1rem;
+}
+
+.fakeLink {
+  margin-left: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.fakeLink:hover {
+  color: rgb(23, 23, 169);
 }

@@ -23,7 +23,7 @@ export const FieldsJobType = ({ reg, control, errors }: TProps) => {
       <div className={style.wrapper}>
         <div className={style.two_fields}>
           <Controller
-            name="jobType"
+            name="Job type"
             control={control}
             render={({ field }) => (
               <Select
@@ -40,16 +40,16 @@ export const FieldsJobType = ({ reg, control, errors }: TProps) => {
             )}
           />
           <Controller
-            name="jobSource"
+            name="Job source"
             control={control}
             render={({ field }) => (
               <Select
+                {...field}
                 className={style.field}
                 instanceId="job source"
                 placeholder="Job Source"
-                {...field}
                 options={[
-                  { value: "test1", label: "test1" },
+                  { value: "GP Philine", label: "GP Philine" },
                   { value: "test2", label: "test2" },
                   { value: "test3", label: "test3" },
                 ]}
@@ -58,11 +58,11 @@ export const FieldsJobType = ({ reg, control, errors }: TProps) => {
           />
         </div>
         <TextArea
-          message={errors.jobDescription?.message}
+          message={errors["Job description"]?.message}
           placeholder="Job Description (optional)"
           rows={4}
           style={{ resize: "none" }}
-          {...reg("jobDescription")}
+          {...reg("Job description")}
         />
       </div>
     </FieldSet>

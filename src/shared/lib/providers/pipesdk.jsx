@@ -1,5 +1,4 @@
 import React, { useState, createContext, useEffect } from "react";
-// import SurfaceSDK from "@pipedrive/custom-app-surfaces-sdk";
 import AppExtensionsSDK from "@pipedrive/app-extensions-sdk";
 
 const SdkContext = createContext({ sdk });

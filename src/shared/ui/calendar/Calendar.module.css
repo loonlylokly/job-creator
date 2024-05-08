@@ -155,6 +155,10 @@
   background-color: var(--clr-primary);
 }
 
+.day_selected:hover {
+  color: var(--clr-text);
+}
+
 .day_today {
 }
 

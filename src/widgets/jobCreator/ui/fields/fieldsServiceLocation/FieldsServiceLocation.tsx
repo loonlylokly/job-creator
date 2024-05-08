@@ -25,30 +25,30 @@ export const FieldsServiceLocation = ({ reg, control, errors }: TProps) => {
         <InputText
           type="text"
           placeholder="Address"
-          message={errors.address?.message}
-          {...reg("address")}
+          message={errors["Address"]?.message}
+          {...reg("Address")}
         />
         <InputText
           type="text"
           placeholder="City"
-          message={errors.city?.message}
-          {...reg("city")}
+          message={errors["City"]?.message}
+          {...reg("City")}
         />
         <InputText
           type="text"
           placeholder="State"
-          message={errors.state?.message}
-          {...reg("state")}
+          message={errors["State"]?.message}
+          {...reg("State")}
         />
         <div className={style.two_fields}>
           <InputText
             type="number"
             placeholder="zipcode"
-            message={errors.zipcode?.message}
-            {...reg("zipcode")}
+            message={errors["Zipcode"]?.message}
+            {...reg("Zipcode")}
           />
           <Controller
-            name="area"
+            name="Area"
             control={control}
             render={({ field }) => (
               <div className={style.field}>
@@ -62,7 +62,7 @@ export const FieldsServiceLocation = ({ reg, control, errors }: TProps) => {
                     { value: "test3", label: "test3" },
                   ]}
                 />
-                {errors.area?.message && <p>{errors.area?.message}</p>}
+                {errors["Area"]?.message && <p>{errors["Area"]?.message}</p>}
               </div>
             )}
           />

@@ -18,27 +18,27 @@ export const FieldsClientDetails = ({ reg, errors }: TProps) => {
           <InputText
             type="text"
             placeholder="First name"
-            message={errors.firstName?.message}
-            {...reg("firstName")}
+            message={errors["First name"]?.message}
+            {...reg("First name")}
           />
           <InputText
             type="text"
             placeholder="Last name"
-            message={errors.lastName?.message}
-            {...reg("lastName")}
+            message={errors["Last name"]?.message}
+            {...reg("Last name")}
           />
         </div>
         <InputText
           type="phone"
           placeholder="Phone"
-          message={errors.phone?.message}
-          {...reg("phone")}
+          message={errors["Phone"]?.message}
+          {...reg("Phone")}
         />
         <InputText
           type="email"
           placeholder="Email (optional)"
-          message={errors.email?.message}
-          {...reg("email")}
+          message={errors["Email"]?.message}
+          {...reg("Email")}
         />
       </div>
     </FieldSet>
